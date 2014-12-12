@@ -91,11 +91,11 @@ At a minimum, there are three things we would like to see:
 * Admin page should list all users
 * Design/layout of content
 
-We will of course examine your code for readability, architectural decisions, and modularity.  If/when you meet with us, you can plan on us asking you about why and how you built your interfaces.
+We will of course examine your code for readability, architectural decisions, and modularity.  If/when you meet with us, be prepared to talk about why and how you built your interfaces.
 
 ## Idea inspiration
 
-Should have have additional time after completing the requirements (we _think_ you should), then we'd love to see what else you can do.  Here are some ideas to get you started (but please don't limit yourself to these!).
+If you have additional time after completing the requirements (we _think_ you should), then we'd love to see what else you can do.  Here are some ideas to get you started (but please don't limit yourself to these!).
 
 * Experiment with alternative designs (A/B Testing is important for registration!)
 * Signup form validation
@@ -113,7 +113,7 @@ To be perfectly clear, we don't expect that anyone could complete _all_ of these
 
 There are two ways that you can submit your solution to us.
 
-The first, is to simply create a .zip file of the project directory and email it to [jobs@getyodlr.com](mailto:jobs@getyodlr.com) with the subject "Front End Code Challenge".
+The first is to simply create a .zip file of the project directory and email it to [jobs@getyodlr.com](mailto:jobs@getyodlr.com) with the subject "Front End Code Challenge".
 
 Alternatively, you can follow the GitHub Fork/PR workflow by [forking this repository](https://github.com/yodlr/frontend-code-challenge/fork), commiting your changes, and submiting a pull request to us.  For more information about that, you can see this [GitHub article](https://help.github.com/articles/fork-a-repo/#propose-changes-to-someone-elses-project)
 

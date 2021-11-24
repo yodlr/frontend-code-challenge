@@ -1,0 +1,39 @@
+nav {
+  background-color: #2471A3;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+.nav-item {
+  width: 100px;
+  text-align: center;
+}
+
+nav a {
+  color: #f0f2f5;
+  text-decoration: none;
+}
+
+nav a.active {
+  color: #f0f2f5;
+  font-weight: bold;
+  border-bottom: 5px dotted;
+  box-sizing: border-box;
+}
+
+nav a.active:hover {
+  color: #f0f2f5 !important;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #f0f2f5;
+}
+
+nav a.active.navbar-brand {
+  border-bottom: none;
+}
+
+nav a:not(.navbar-brand):hover {
+  font-weight: bold;
+}
+

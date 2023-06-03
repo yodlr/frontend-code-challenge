@@ -18,8 +18,8 @@ const Register = () => {
     setEmail(e.target.value);
   }
   const handleSubmit = async () => {
-    console.log(firstName, lastName, email)
-    const resp = await api.RegisterNewUser({
+    // console.log(firstName, lastName, email)
+    const resp = await api.registerNewUser({
       firstName, lastName, email
     })
     console.log(resp)

@@ -22,21 +22,40 @@ class API {
   }
 
   async test() {
-    const resp = this.makeRequest('users/test');
+    const resp = await this.makeRequest('users/test');
     return resp;
   }
 
   async getAllUsers() {
-    const resp = this.makeRequest('users/');
+    const resp = await this.makeRequest('users/');
     return resp;
   }
 
-  async RegisterNewUser(data) {
-    const submitData = {...data, 'state':'pending'}
-    console.log(submitData)
-    const resp = this.makeRequest('users/', 'POST', submitData);
+  async registerNewUser(data) {
+    const submitData = { ...data, 'state':'pending' }
+    const resp = await this.makeRequest('users/', 'POST', submitData);
     return resp;
   }
+
+  async deleteUser(id) {
+    const resp = await this.makeRequest(`users/${id}`, 'DELETE')
+    console.log(resp)
+    return resp
+  }
+
+  async approveUser(data) {
+    const submitData = { ...data, 'state': 'active' }
+    const id = data.id
+    const resp = await this.makeRequest(`users/${id}`, 'PUT', submitData);
+    return resp;
+  }
+
+  async getUserById(id) {
+    const resp = await this.makeRequest(`users/${id}`, 'GET')
+    console.log(resp)
+    return resp
+  }
+
 }
 
 const api = new API();

@@ -8,17 +8,30 @@ const Admin = () => {
   const [users, setUsers] = useState()
 
   useEffect(() => {
-    const getUsers = async () => {
-      const response = await api.getAllUsers()
-      console.log(response)
-      setUsers(response)
-    }
     getUsers()
-  }, [])  
+  }, [])
+
+  const getUsers = async () => {
+    const response = await api.getAllUsers()
+    console.log(response)
+    setUsers(response)
+  }
+
+  const handleDelete = async (id) => {
+    const resp = await api.deleteUser(id)
+    getUsers()
+  }
+
+  const handleApproveUser = async (firstName, lastName, email, id) => {
+    const resp = await api.approveUser({
+      firstName, lastName, email, id
+    })
+    getUsers()
+  }
 
 
   return (
-    <div>
+    <div id="users-container">
       <h3>Users</h3>
       {users && users.map(user => {
         return(
@@ -28,6 +41,9 @@ const Admin = () => {
             lastName={user.lastName}
             email={user.email}
             state={user.state}
+            id={user.id}
+            handleDelete={handleDelete}
+            handleApproveUser={handleApproveUser}
           />
         )
       })}

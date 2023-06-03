@@ -1,0 +1,15 @@
+#single-user-item {
+    display: flex;
+    justify-content: space-around;
+}
+
+#single-user-item #info {
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+}
+
+#single-user-item #buttons {
+    display: flex;
+    width: 200px;
+}

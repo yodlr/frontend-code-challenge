@@ -33,18 +33,23 @@ const Admin = () => {
   return (
     <div id="users-container">
       <h3>Users</h3>
+      <br></br>
+      <hr></hr>
       {users && users.map(user => {
         return(
-          <User
-            key={user.id}
-            firstName={user.firstName}
-            lastName={user.lastName}
-            email={user.email}
-            state={user.state}
-            id={user.id}
-            handleDelete={handleDelete}
-            handleApproveUser={handleApproveUser}
-          />
+          <div key={user.id}>
+            <User
+              key={user.id}
+              firstName={user.firstName}
+              lastName={user.lastName}
+              email={user.email}
+              state={user.state}
+              id={user.id}
+              handleDelete={handleDelete}
+              handleApproveUser={handleApproveUser}
+            />
+          <hr></hr>
+          </div>
         )
       })}
     </div>

@@ -1,0 +1,39 @@
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-container p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.register-container label {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.register-container input {
+    width: 300px;
+    height: 32px;
+    padding: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.register-container button {
+    font-size: 18px;
+    padding: 10px;
+    background-color: darkgray;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.register-container button:hover {
+    box-shadow: 2px 2px gray;
+}

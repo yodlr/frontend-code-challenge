@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+
+#navbar-outer {
+  background-color: lightgray;
+}
+
+#navbar-inner {
+  margin: auto;
+  width: 20vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+#navbar-inner a {
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+#navbar-inner a:hover {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}

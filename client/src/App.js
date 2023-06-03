@@ -12,9 +12,11 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <div id='navbar'>
-          <a href='/admin'><p>admin</p></a>
-          <a href='/register'><p>register</p></a>
+        <div id='navbar-outer'>
+          <div id='navbar-inner'>
+            <a href='/admin'><p>admin</p></a>
+            <a href='/register'><p>register</p></a>
+          </div>
         </div>
         <Routes>
           <Route path="/admin" element={<Admin />} />

@@ -30,6 +30,13 @@ class API {
     const resp = this.makeRequest('users/');
     return resp;
   }
+
+  async RegisterNewUser(data) {
+    const submitData = {...data, 'state':'pending'}
+    console.log(submitData)
+    const resp = this.makeRequest('users/', 'POST', submitData);
+    return resp;
+  }
 }
 
 const api = new API();

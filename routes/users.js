@@ -1,11 +1,21 @@
 var express = require('express');
+var cors = require('cors');
+var app = express();
 var router = express.Router();
 var _ = require('lodash');
 var logger = require('../lib/logger');
 var log = logger();
 
+router.use(cors());
+app.use(cors());
+
 var users = require('../init_data.json').data;
 var curId = _.size(users);
+
+/* test api connection. */
+router.get('/test', function (req, res) {
+  res.json('test')
+});
 
 /* GET users listing. */
 router.get('/', function(req, res) {

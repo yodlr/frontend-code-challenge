@@ -1,40 +1,26 @@
 import React, { useEffect, useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
 import api from './api';
+import Admin from './components/Admin';
+import Register from './components/Register';
 
 function App() {
 
-  useEffect(() => {
-    // const testApi = async () => {
-    //   const response = await api.test()
-    //   console.log(response)
-    // }
-    // testApi()
-    const getUsers = async () => {
-      const response = await api.getAllUsers()
-      console.log(response)
-    }
-    getUsers()
-  }, [])  
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <div id='navbar'>
+          <a href='/admin'><p>admin</p></a>
+          <a href='/register'><p>register</p></a>
+        </div>
+        <Routes>
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

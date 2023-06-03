@@ -1,0 +1,40 @@
+#single-user-item {
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+#single-user-item #info {
+    display: flex;
+    /* justify-content: space-around; */
+    width: 70vw;
+    margin-left: 10vw;
+    /* background-color: aqua; */
+}
+
+#single-user-item #info p {
+    width: 25%;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#single-user-item #buttons {
+    display: flex;
+    width: 20vw;
+    /* background-color: pink; */
+}
+
+#single-user-item #buttons button {
+    font-size: 14px;
+    padding: 2px 10px;
+    background-color: darkgray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+#single-user-item #buttons button:hover {
+    box-shadow: 2px 2px gray;
+}

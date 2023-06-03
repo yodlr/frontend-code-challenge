@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset=utf-8>
+  <meta charset="utf-8">
   <title>Yodlr Admin Page</title>
 </head>
+
 <body>
-  List user data here
+  <div id="userList">
+
+  </div>
+
+  <script src="./js/admin.js"></script>
+  <script>
+    // Run the getData() function when the HTML is loaded
+    window.addEventListener('DOMContentLoaded', async function () {
+      const userListElement = document.getElementById('userList');
+
+      try {
+        const data = await getData();
+        console.log(data);
+
+        // Generate HTML to display user data
+        const userHtml = Object.values(data).map(user => `<div>${user.firstName} ${user.lastName}: ${user.email}</div>`).join('');
+
+        // Insert userHtml into the userListElement
+        userListElement.innerHTML = userHtml;
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    });
+  </script>
 </body>
+
 </html>
